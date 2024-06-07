@@ -1,0 +1,175 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Compliment Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        input[type="number"] {
+            width: 50px;
+            padding: 5px;
+            margin: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .compliment {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Compliment Generator</h1>
+        <p>Enter a number between 1 and 100:</p>
+        <input type="number" id="numberInput" min="1" max="100">
+        <button onclick="generateCompliment()">Get Compliment</button>
+        <div class="compliment" id="complimentOutput"></div>
+    </div>
+
+    <script>
+        const compliments = [
+            "You're an awesome friend.",
+            "You have a great sense of humor.",
+            "You're a true gift to the people in your life.",
+            "You're an incredible person.",
+            "Your smile lights up the room.",
+            "You have a kind heart.",
+            "You're a great listener.",
+            "You're so thoughtful.",
+            "You're a great problem solver.",
+            "You inspire me.",
+            "You are a ray of sunshine.",
+            "You're a breath of fresh air.",
+            "You have an amazing personality.",
+            "You're so creative.",
+            "You're a fantastic leader.",
+            "You have a positive attitude.",
+            "You're a great communicator.",
+            "You're an amazing friend.",
+            "You're so talented.",
+            "You bring out the best in others.",
+            "You're so understanding.",
+            "You're a joy to be around.",
+            "You have a beautiful soul.",
+            "You're so reliable.",
+            "You have a contagious smile.",
+            "You're so hardworking.",
+            "You're so brave.",
+            "You're so generous.",
+            "You have a wonderful laugh.",
+            "You're so inspiring.",
+            "You're a great mentor.",
+            "You're so supportive.",
+            "You're so enthusiastic.",
+            "You're so determined.",
+            "You're so thoughtful.",
+            "You have a wonderful outlook on life.",
+            "You're so compassionate.",
+            "You're so charming.",
+            "You light up the room.",
+            "You're so talented.",
+            "You're so intelligent.",
+            "You're a great role model.",
+            "You have a beautiful mind.",
+            "You're so unique.",
+            "You're so kind-hearted.",
+            "You make a difference.",
+            "You're a true gem.",
+            "You're so insightful.",
+            "You have a wonderful presence.",
+            "You're so dependable.",
+            "You're a great friend.",
+            "You're so genuine.",
+            "You're so polite.",
+            "You're so respectful.",
+            "You're so humble.",
+            "You're so adventurous.",
+            "You're so funny.",
+            "You're so loving.",
+            "You're so patient.",
+            "You're so positive.",
+            "You're so wise.",
+            "You're so talented.",
+            "You're a true friend.",
+            "You're so thoughtful.",
+            "You're so friendly.",
+            "You're so dedicated.",
+            "You're so charismatic.",
+            "You're so courageous.",
+            "You're so empathetic.",
+            "You're so fun to be around.",
+            "You're so helpful.",
+            "You're so honest.",
+            "You're so inspiring.",
+            "You're so loyal.",
+            "You're so optimistic.",
+            "You're so passionate.",
+            "You're so resilient.",
+            "You're so resourceful.",
+            "You're so sincere.",
+            "You're so strong.",
+            "You're so supportive.",
+            "You're so trustworthy.",
+            "You're so understanding.",
+            "You're a great companion.",
+            "You're so dependable.",
+            "You're a great listener.",
+            "You're so nurturing.",
+            "You're so open-minded.",
+            "You're so patient.",
+            "You're so thoughtful.",
+            "You're so warm-hearted.",
+            "You're so witty.",
+            "You're so youthful.",
+            "You're so zesty.",
+            "You're a great confidant.",
+            "You're a true leader.",
+            "You're a true original.",
+            "You're so down-to-earth.",
+            "You're a true visionary.",
+            "You're a true friend.",
+            "You're a real go-getter.",
+            "You're a true star.",
+            "You're an inspiration to us all."
+        ];
+
+        function generateCompliment() {
+            const numberInput = document.getElementById('numberInput').value;
+            const complimentOutput = document.getElementById('complimentOutput');
+            if (numberInput >= 1 && numberInput <= 100) {
+                const randomIndex = Math.floor(Math.random() * compliments.length);
+                complimentOutput.textContent = compliments[randomIndex];
+            } else {
+                complimentOutput.textContent = "Please enter a number between 1 and 100.";
+            }
+        }
+    </script>
+</body>
+</html>
